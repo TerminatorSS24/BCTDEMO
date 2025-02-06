@@ -1,0 +1,111 @@
+body {
+    background-image: linear-gradient(red, blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-card, .formsubmit {
+    text-align: center;
+    border: 5px solid black;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.profile-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-card p{
+    color: red;
+}
+
+.profile-card button, .formsubmit button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.profile-card button:hover, .formsubmit button:hover {
+    background-color: grey;
+}
+
+.profile-card button:active, .formsubmit button:active {
+    background-color: darkgrey;
+}
+
+.animatebox {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, blue, cyan);
+    border: 3px solid black;
+    position: absolute;
+    border-radius: 15px;
+    animation: rotateMove 4s infinite linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px black;
+}
+
+@keyframes rotateMove {
+    0% {
+        background: linear-gradient(45deg, brown, orange);
+        left: 0px;
+        top: 0px;
+        transform: rotate(0deg);
+    }
+    25% {
+        background: linear-gradient(45deg, blue, cyan);
+        left: 200px;
+        top: 0px;
+        transform: rotate(90deg);
+    }
+    50% {
+        background: linear-gradient(45deg, green, lightgreen);
+        left: 200px;
+        top: 200px;
+        transform: rotate(180deg);
+    }
+    75% {
+        background: linear-gradient(45deg, yellow, gold);
+        left: 0px;
+        top: 200px;
+        transform: rotate(270deg);
+    }
+    100% {
+        background: linear-gradient(45deg, brown, orange);
+        left: 0px;
+        top: 0px;
+        transform: rotate(360deg); 
+    }
+}
